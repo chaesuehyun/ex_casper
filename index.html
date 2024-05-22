@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예제 홈페이지 캐스퍼</title>
+  <!--초기화 문서-->
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <!--기본서식-->
+  <link rel="stylesheet" type="text/css" href="./css/base.css">
+  <!--공통서식-->
+  <link rel="stylesheet" type="text/css" href="./css/common.css">
+  <!--메인서식-->
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <!--스와이퍼 문서-->
+  <link rel="stylesheet" type="text/css" href="./css/swiper.css">
+  <!--아이콘 폰트-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!--제이쿼리 cdn-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+<body>
+  <!--상단 헤더 영역-->
+  <header>
+    <h1 ><a href="index.html" title="메인페이지로 바로가기">
+      <img src="./images/logo-casper-white.png" alt="캐스퍼 로고 화이트">
+    </a></h1>
+
+    <!--내비게이션-->
+    <nav class="gnb">
+      <ul>
+        <li><a href="#" title="소개">소개</a></li>
+        <li><a href="#" title="체험">체험</a></li>
+        <li><a href="#" title="이벤트">이벤트</a></li>
+        <li><a href="#" title="구매">구매</a></li>
+        <li><a href="#" title="고객지원">고객지원</a></li>
+      </ul>
+    </nav>
+
+    <a href="./login.html" title="">
+      <i class="fa-solid fa-user fas"></i>
+    </a>
+      <i class="fas fa-bell"></i><!--알림 아이콘-->
+
+    <!-- 원형 내비게이션-->
+    <nav id="m_nav">
+      <ul>
+        <li><span>1</span><a href="#" title="소개">소개</a></li>
+        <li><span>2</span><a href="#" title="체험">체험</a></li>
+        <li><span>3</span><a href="#" title="이벤트">이벤트</a></li>
+        <li><span>4</span><a href="#" title="구매">구매</a></li>
+        <li><span>5</span><a href="#" title="고객지원">고객지원</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  
+  <!--메인 영역-->
+  <main>
+    <section id="intro_m">
+      <article>
+        <h2 class="sec_title">CASPER</h2>
+        <p>오직 캐스퍼 온라인에서만 구매하실 수 있습니다.</p>
+        <a href="#" title="나만의 캐스퍼 만들기">나만의 캐스퍼 만들기</a>
+        <a href="#" title="구매 혜택보기">구매 혜택보기</a>
+        <a href="#" title="자세히 보기">자세히 보기</a>
+      </article>
+      <video autoplay muted loop>
+        <source src="./images/casper_te_18.webm">
+      </video>
+      <a href="#" title="아래로 이동" class="next_page">&nbsp;</a>
+    </section>
+  </main>
+
+
+  <!--푸터 영역-->
+  <footer>
+    <div class="f_inner">
+      <h2>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo-hyundai.a9ebdc6.png" alt="">
+        </a>
+      </h2>
+
+      <nav class="f_lnb">
+        <ul>
+          <li><a href="" title="이용약관">이용약관</a></li>
+          <li><a href="" title="개인정보 처리방침">개인정보 처리방침</a></li>
+          <li><a href="" title="저작권안내">저작권안내</a></li>
+          <li><a href="" title="공동인증서 안내">공동인증서 안내</a></li>
+          <li><a href="" title="현대자동차 홈페이지">현대자동차 홈페이지</a></li>
+        </ul>
+      </nav>
+
+      <address>
+        <dl>
+          <dt>사업자 등록번호 : </dt>
+          <dt>101-00-00000 </dt>
+          <dt>통신판매업신고번호 : </dt>
+          <dd>2022-012345</dd>
+          <dt>대표이사 : </dt>
+          <dd>장재훈</dd>
+          <dt>주소 : </dt>
+          <dd>서울시 서초구 헌릉로 12</dd>
+          <dt>호스팅 서비스 제공 : </dt>
+          <dd>현대오토에버(주) </dd>
+        </dl>
+        <p>COPYRIGHT&copy; 2023 HYUNDAI MOTOR COMPANY, ALL RIGHTS RESERVED.</p>
+      </address>
+    </div>
+  </footer>
+
+
+  <script src="./script/jquery.cookie.js"></script>
+  <script src="./script/prefixfree.min.js"></script>
+  <script src="./script/swiper.js"></script>
+  
+
+
+
+  <script>
+    $(document).ready(function(){
+      //변수선언
+      let modal = `
+      <div class="modal">
+    <div class="m_inner">
+      <a href="#" title="">
+        <img src="./images/main_Popup_PC_450x600.jpg">
+      </a>
+      <input type="checkbox" id="ch">
+      <label for="ch" class="btn">일주일간 열지 않기</label>
+      <input type="button" value="닫기" class="r_btn">
+    </div>
+  </div>
+      `
+      $('body').append(modal);
+
+      let ch =$('#ch');
+      //쿠키정보가 있다면 모당창이 안나오게 한다
+      if($.cookie('popup')=='none'){
+        $('.modal').hide()
+      } 
+
+      //체크박스를 체크하고 닫기버튼 누르면 모달창이 닫힘
+      function close_popup(){
+        if(ch.is(':checked')){//체크가 된 경우라면
+          //쿠키정보가 저장되어야함
+          $.cookie('popup','none',{expires:7, path:'/'});//쿠키정보를 popup,none값으로 생성
+        $('.modal').hide()
+        }else{//체크박스에 체크하지 않았다면 
+          //쿠키정보를 생성하지 않고 그냥 닫기
+          $('.modal').hide()
+        }
+      }
+
+      //닫기버튼 클릭시 close_popup 함수를 호출하여 실행한다,
+      $('.r_btn').click(function(){
+        close_popup();
+      })
+    })
+  </script>
+</body>
+</html>

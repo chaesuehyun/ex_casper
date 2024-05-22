@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 폼</title>
+    <!--초기화 문서-->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <!--기본서식-->
+    <link rel="stylesheet" type="text/css" href="./css/base.css">
+  <style>
+    main{width: 100%;}
+    .login{
+      width: 800px; margin: 0 auto;
+      background: rgb(212, 212, 212);  
+      text-align: center;
+      height: 600px;
+      margin-top: 100px;
+    }
+    .login > h1{padding: 120px 0px 50px 0px;}
+    legend{display: none;}
+    .id_txt,.pw_txt{
+      /* height: 50px; */
+      margin-bottom: 20px;
+    }
+    .login p{ font-size: 16px;}
+    .id_txt >label , .pw_txt > label{display: none;}
+    #id_txt,#pw_txt{height: 60px; width: 100%; border: 1px solid #bbbbbb;}
+
+    .id_save{text-align: left;}
+    .login_btn{margin: 30px 0px ;}
+    .login_btn > input{
+      width: 100%; 
+      height: 60px;
+      border: none;
+      background: #042653;
+      color: #fff;
+    }
+    .login >form {width: 400px; margin: 0 auto;}
+    .login >form  p:last-child{margin-bottom: 30px;}
+    .login >form  p:last-child >a{border-right: 1px solid #333;padding: 0px 10px ; font-size: 14px;}
+
+
+  </style>
+
+</head>
+<body>
+  <header></header>
+  <main>
+    <section class="login">
+      <h1><a href="./index.html">
+        <img src="./images/logo-casper_black.png" alt="">
+      </a></h1>
+      <form name="login">
+        <fieldset>
+          <legend>로그인 폼</legend>
+          <p class="id_txt">
+            <label for="id_txt"> ID : </label>
+            <input type="text" maxlength="10" id="id_txt" name="id_txt" placeholder="아이디를 입력해주세요" autocomplete="off">
+          </p>
+          <p class="pw_txt">
+            <label for="pw_txt"> PW : </label>
+            <input type="password" maxlength="10" id="pw_txt" name="pw_txt" placeholder="비밀번호를 입력해주세요." autocomplete="off">
+          </p>
+          <p class="id_save"><input type="checkbox" id="id_save"><label for="id_save">아이디 저장</label></p>
+          <p class="login_btn"><input type="submit" value="로그인" id="login_btn"></p>
+          <p>
+            <a href="#" title="">아이디 찾기</a>
+            <a href="#" title="">비밀번호 찾기</a>
+            <a href="#" title="">회원가입</a>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="./script/javascript_cookie.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){//만약에 key변수에 값이 있다면
+      let key = getCookie('idChk');// id 값을 지정
+      if(key!=""){
+        $('#id_txt').val(key)
+      };
+
+      if($('#id_txt').val() !=""){//만약에 id 값이 있다면 
+        $('id_save').attr('checked',true);//체크박스에 체크를 한다.
+      };
+
+      $('#id_save').change(function(){//체크박스의 상태가 변경되면 아래내용 실행
+        if($('#id_save').is(':checked')){//체크박스에 체크가 된경우라면
+          setCookie('idChk',$('#id_txt').val(), 7);//쿠키를 생성하고
+        }else{//그렇지 않으면
+          deleteCookie('idChk');//쿠키를 삭제한다.
+        }
+      });
+
+      $('#id_txt').keyup(function(){//아이디 입력창에 키를 눌렀을 경우
+        if($('#id_save').is(':checked')){//체크박스에 체크가 된 경우라면
+          setCookie('idChk', $('#id_txt').val(),7);//쿠키를 생성한다.
+        }
+      })
+
+
+
+
+    });
+  </script>
+</body>
+</html>

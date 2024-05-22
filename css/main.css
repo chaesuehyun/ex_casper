@@ -1,0 +1,100 @@
+@charset "uft-8";
+
+:root{
+  --m_bt_color:#fff;
+  --m_font:"Noto Sans KR";
+  --f_size_base: 12px;
+  --f_size14 : 14px;
+  --f_size16 : 16px;
+  --f_color1 : #333;
+  --f_color2 : #006eff;
+  --s_color1 : #215499;
+  --s_color2 : #042653;
+  --s_color3 : #2986A7;
+}
+
+/*모달창 서식*/
+.modal{
+  background: rgba( 0,0,0,.6);
+  position: fixed;
+  top: 0px;
+  width: 100%; height: 100%;
+  z-index: 1001;
+}
+.m_inner{
+  width: 450px;height: 650px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  /* border-radius: 10px 10px 0px 0px ; */
+}
+.m_inner img{
+  margin-bottom: 15px;
+}
+.m_inner input{vertical-align: baseline;}
+.m_inner input,.m_inner label{
+  font-size: var(--f_size14);
+  margin-left: 10px;
+}
+.r_btn{
+  float: right;margin-right: 10px;
+  background: none;
+  border: 1px solid #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main{}
+#intro_m{
+  width: 100%; height: 100vh;
+  overflow: hidden;
+  color: var(--m_bt_color);
+}
+#intro_m article{
+  position: absolute;
+  width: 100%;
+  top:26%;
+  z-index: 100;
+  text-align: center;
+  font-size: var(--f_size16);
+}
+#intro_m article p{line-height: 80px;}
+#intro_m article a{
+  font-size: var(--f_size14);
+  color: var(--m_bt_color);
+  text-decoration: underline;
+  padding: 5px 10px;
+}
+
+#intro_m article a:first-of-type{
+  background: var(--f_color2);
+}
+.next_page{
+  width: 20px; height: 20px;
+  border-left: 2px solid var(--m_bt_color);
+  border-bottom: 2px solid var(--m_bt_color);
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  z-index: 1000;
+  transform: rotate(-45deg);
+}
+
+.sec_title{
+  font-size: 60px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  text-align: center;
+}

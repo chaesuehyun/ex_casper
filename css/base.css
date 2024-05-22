@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/*웹폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root{
+  --m_bt_color:#fff;
+  --m_font:"Noto Sans KR";
+  --f_size_base: 12px;
+  --f_size14 : 14px;
+  --f_size16 : 16px;
+  --f_color1 : #333;
+  --f_color2 : #006eff;
+  --s_color1 : #215499;
+  --s_color2 : #042653;
+  --s_color3 : #2986A7;
+}
+
+/*body 서식*/
+body{
+  overflow-x: hidden;
+  background: var(--m_bt_color);
+  font-family:var(--m_font), '맑은 고딕', sans-serif ; 
+  font-size: var(--f_size_base);
+  color: var(--f_color1);
+}
+
+/*링크 서식*/
+a{
+  color: var(--f_color1);
+  text-decoration: none;
+  font-size: var(--f_size_base);
+}
