@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시승 신청 예약</title>
+    <!--초기화 문서-->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <!--기본서식-->
+    <link rel="stylesheet" type="text/css" href="./css/base.css">
+    <!--공통서식-->
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <!--아이콘 폰트-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      header{
+        background: #fff;
+        position: static;
+      }
+      header .gnb>ul>li> a{color: #333;}
+      header i.fas{color: #333;}
+      .sub_top{
+        background: url(./images/bg-main-test-driving.125a037.jpg) 100%;
+        height: 300px;
+        color: #fff;
+      }
+      .sub_top nav{
+        position: relative;
+        left: 15%; top: 50px;
+      }
+      .sub_top h2{text-align: center; font-size: 40px; font-weight: 400; padding-top: 100px;}
+      .sub_top p{text-align: center;padding-top: 30px;}
+      /* form 태그 서식들*/
+      section{width: 100%; text-align: center; margin: 100px 0px;}
+      section h2{display: none;}
+      legend{ 
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin: 50px 0px;
+      }
+      section p{margin: 20px 0px; font-size: 16px}
+      form{
+        width: 520px;
+        margin: 0 auto;
+        text-align: right;
+      }
+      label{float: left;padding-top: 15px;}
+      input[type='radio']{vertical-align: baseline;}
+
+      input[type="text"],input[type="date"],input[type="email"],select{
+        width: 400px; height: 40px;
+      }
+      select{width: 410px;}
+      input[type='date']{width: 405px;}
+      fieldset > p:nth-child(4){text-align: left;}
+      fieldset > p:nth-child(4) label{float: none;}
+      fieldset > p:nth-child(4) label:first-child{margin-left: 10px;}
+
+      input[type='submit'],input[type='reset']{
+        width: 255px; height: 40px;
+        border: none;
+        color: #fff;
+      }
+      input[type='submit']{background: #006eff;}
+      input[type='reset']{background: #333;}
+
+    </style>
+</head>
+<body>
+  <!--상단 헤더 영역-->
+  <header>
+    <h1 ><a href="index.html" title="메인페이지로 바로가기">
+      <img src="./images/logo-casper_black.png" alt="캐스퍼 로고 화이트">
+    </a></h1>
+
+    <!--내비게이션-->
+    <nav class="gnb">
+      <ul>
+        <li><a href="#" title="소개">소개</a></li>
+        <li><a href="#" title="체험">체험</a></li>
+        <li><a href="#" title="이벤트">이벤트</a></li>
+        <li><a href="#" title="구매">구매</a></li>
+        <li><a href="#" title="고객지원">고객지원</a></li>
+      </ul>
+    </nav>
+
+    <a href="./login.html" title="">
+      <i class="fa-solid fa-user fas"></i>
+    </a>
+      <i class="fas fa-bell"></i><!--알림 아이콘-->
+
+    <!-- 원형 내비게이션-->
+    <nav id="m_nav">
+      <ul>
+        <li><span>1</span><a href="#" title="소개">소개</a></li>
+        <li><span>2</span><a href="#" title="체험">체험</a></li>
+        <li><span>3</span><a href="#" title="이벤트">이벤트</a></li>
+        <li><span>4</span><a href="#" title="구매">구매</a></li>
+        <li><span>5</span><a href="#" title="고객지원">고객지원</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="sub_top">
+      <nav>홈 &gt; 체험 &gt; <b>시승 신청</b></nav>
+      <h2>시승 신청</h2>
+      <p>캐스퍼가 제공하는 편리한 시승 서비스를 이용해보세요</p>
+    </div>
+    <section>
+      <h2>시승신청 온라인 예약</h2>
+      <form name="시승 신청" method="post" action="db_insert.php">
+        <fieldset>
+          <legend>시승 신청 온라인 예약</legend>
+          <p><label> 고객명 : </label><input type="text" name="name" required></p>
+          <p><label>휴대폰 : </label><input type="text" name="phone" required></p>
+          <p>SMS수신여부 : 
+            <label for="s01">수신</label>
+            <input type="radio" name="sms" id="s01" value="Y">
+            <label for="s02">수신 안함</label>
+            <input type="radio" name="sms" id="s02" value="N">
+          </p>
+          <p>
+            <label>이메일 주소 : </label><input type="email" name="email" required>
+          </p>
+          <p>
+            <label>전시장 선택 : </label>
+            <select name="region" id="region" required>
+              <option value="">전시장 선택</option>
+              <option value="강남점">강남점</option>
+              <option value="송파점">송파점</option>
+              <option value="한남점">한남점</option>
+            </select>
+          </p>
+          <p>
+            <label>차량 선택 : </label>
+            <select name="car" id="car" required>
+              <option value="">차량 선택</option>
+              <option value="강남점">캐스퍼</option>
+              <option value="송파점">캐스퍼 인스퍼레이션</option>
+              <option value="한남점">소나타</option>
+              <option value="한남점">그랜저</option>
+              <option value="한남점">제네시스</option>
+            </select>
+          </p>
+          <p>
+            <label>보유차종 : </label><input type="text" name="my_car" required>
+          </p>
+          <p>
+            <label>시승희망일 : </label><input type="date" name="e_date" required>
+          </p>
+          <input type="submit" value="예약하기">
+          <input type="reset" value="취소하기">
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="f_inner">
+      <h2>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo-hyundai.a9ebdc6.png" alt="">
+        </a>
+      </h2>
+
+      <nav class="f_lnb">
+        <ul>
+          <li><a href="" title="이용약관">이용약관</a></li>
+          <li><a href="" title="개인정보 처리방침">개인정보 처리방침</a></li>
+          <li><a href="" title="저작권안내">저작권안내</a></li>
+          <li><a href="" title="공동인증서 안내">공동인증서 안내</a></li>
+          <li><a href="" title="현대자동차 홈페이지">현대자동차 홈페이지</a></li>
+        </ul>
+      </nav>
+
+      <address>
+        <dl>
+          <dt>사업자 등록번호 : </dt>
+          <dt>101-00-00000 </dt>
+          <dt>통신판매업신고번호 : </dt>
+          <dd>2022-012345</dd>
+          <dt>대표이사 : </dt>
+          <dd>장재훈</dd>
+          <dt>주소 : </dt>
+          <dd>서울시 서초구 헌릉로 12</dd>
+          <dt>호스팅 서비스 제공 : </dt>
+          <dd>현대오토에버(주) </dd>
+        </dl>
+        <p>COPYRIGHT&copy; 2023 HYUNDAI MOTOR COMPANY, ALL RIGHTS RESERVED.</p>
+      </address>
+    </div>
+  </footer>
+</body>
+</html>
