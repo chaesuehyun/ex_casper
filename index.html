@@ -46,11 +46,11 @@
     <!-- 원형 내비게이션-->
     <nav id="m_nav">
       <ul>
-        <li><span>1</span><a href="#" title="소개">소개</a></li>
-        <li><span>2</span><a href="#" title="체험">체험</a></li>
-        <li><span>3</span><a href="#" title="이벤트">이벤트</a></li>
-        <li><span>4</span><a href="#" title="구매">구매</a></li>
-        <li><span>5</span><a href="#" title="고객지원">고객지원</a></li>
+        <li><span>1</span><a href="#intro" title="소개">소개</a></li>
+        <li><span>2</span><a href="#drive_con" title="체험">체험</a></li>
+        <li><span>3</span><a href="#event_con" title="이벤트">이벤트</a></li>
+        <li><span>4</span><a href="#buy_con" title="구매">구매</a></li>
+        <li><span>5</span><a href="#cs_con" title="고객지원">고객지원</a></li>
       </ul>
     </nav>
   </header>
@@ -70,7 +70,7 @@
       <video autoplay muted loop>
         <source src="./images/casper_te_18.webm">
       </video>
-      <a href="#" title="아래로 이동" class="next_page">&nbsp;</a>
+      <a href="#top3" title="아래로 이동" class="next_page">&nbsp;</a>
     </section>
 
     <!--2. 가장 많이 찾는 캐스퍼-->
@@ -120,7 +120,7 @@
           </div>
         </div>
         <!--컨트롤 버튼-->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination1"></div>
         <!--좌우 버튼-->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -129,7 +129,7 @@
     <!--3번 째 컨텐츠 소개-->
     <section id="intro">
       <h2 class="sec_title2"> 소개 </h2>
-      <span class="intro_title_left">강인하고 <br> 아이코닉한 sSUV</span>
+      <span class="intro_title_left">강인하고 <br> 아이코닉한 SUV</span>
       <span class="intro_title_right">젊고 역동적인 <br> 감성의 <br> SUV디자인</span>
       <video autoplay muted>
         <source src="./images/highlight_intro.mp4" type="video/mp4">
@@ -138,7 +138,7 @@
     </section>
 
     <!--4번째 컨텐츠 시승-->
-    <section class="test_drive">
+    <section class="test_drive" id="drive_con">
       <h2 class="sec_title2"> 시승 신청</h2>
       <p class="p01">캐스퍼가 제공하는 편리한 시승 서비스를 이용해 보세요</p>
 
@@ -159,7 +159,7 @@
     </section>
 
     <!--5번째 컨텐츠 이벤트 프로모션-->
-    <section class="event_promo">
+    <section class="event_promo" id="event_con">
       <h2 class="sec_title2">이벤트 &#38; 프로모션</h2>
       <p class="p01">다양한 이벤트 프로모션과 함께 캐스퍼를 만나보세요.</p>
       <div class="swiper event">
@@ -177,7 +177,7 @@
     </section>
 
     <!--6번째 컨텐츠 캐스퍼 구매 안내-->
-    <section class="buy_info">
+    <section class="buy_info" id="buy_con">
       <h2 class="sec_title2">캐스퍼 구매 안내</h2>
       <p class="p01">구매 절차를 차근차근 알려드립니다.</p>
       <h3>
@@ -225,6 +225,75 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/MQSGzDRejUM?si=pI_9ydfz8nDh8oc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 
+    <!--7번째 컨텐츠 고객 지원-->
+    <section class="cs" id="cs_con">
+      <h2 class="sec_title2">고객 지원</h2>
+      <article class="clearfix">
+        <h3>ARS 상담</h3>
+        <div class="ars_left">
+          <p>
+            <strong>캐스퍼 구매상담</strong>
+            <a href="#" title="ARS 이용방법">ARS 이용방법 &gt;</a>
+            <span class="car_icon">자동차</span>
+          </p>
+          <dl>
+            <dt>전화 번호</dt>
+            <dd>080-500-6000</dd>
+            <dt>이용 시간</dt>
+            <dd>월 ~ 일요일 09:00 ~22:00</dd>
+          </dl>
+
+        </div>
+        <div class="ars_right">
+          <p>
+            <strong>캐스퍼 정비/멤버쉽 상담</strong>
+            <a href="#" title="누르는ARS 이용방법">누르는 ARS이용방법 &gt;</a>
+            <a href="#" title="보이는ARS 이용방법">보이는 ARS이용방법 &gt;</a>
+            <span class="member_icon">멤버쉽</span>
+          </p>
+          <dl>
+            <dt>전화 번호</dt>
+            <dd>080-600-6000</dd>
+            <dt>이용 시간</dt>
+            <dd>월 &#126; 금요일 08:30 &#126; 19:00</dd>
+            <dd>토요일/공휴일 09:00 &#126; 17:00</dd>
+            <dd>일요일 09:00 &#126; 16:00</dd>
+          </dl>
+
+        </div>
+      </article>
+      <ul class="cs_etc">
+        <li>
+          <h3>1:1문의</h3>
+          <p>1:1 문의가 필요하신가요?</p>
+          <a href="#" title="나의 문의 내력" class="cs_txt">나의 문의 내력&gt;</a>
+          <a href="#" title="1:1문의" class="cs_btn">1:1문의</a>
+        </li>
+        <li>
+          <h3>채팅 상담</h3>
+          <p>채팅 상담이 필요하신가요?</p>
+          <p>월 &#126; 일요일 09:00 &#126; 22:00</p>
+          <a href="#" title="채팅 상담원 연결" class="cs_btn">채팅 상담원 연결</a>
+        </li>
+        <li>
+          <h3>원격 지원</h3>
+          <p>상담원이 고객님과 같은 PC화면 을 보면서 도움을 드립니다</p>
+          <p>월 &#126; 일요일 09:00 &#126; 22:00</p>
+          <a href="#" title="원격지원 시작하기" class="cs_btn">원격지원 시작하기</a>
+        </li>
+        <li>
+          <h3>마이현대 APP</h3>
+          <p>현대자동차 멤버십과 차량 정비/정검, 카라이프 서비스까지 모두 마이 현대로 관리하세요.</p>
+          <a href="#" title="" class="cs_img"><img src="./images/app.png" alt="앱"></a>
+          <a href="#" title="iOS 연결" class="cs_left"> iOS &gt;</a>
+          <a href="#" title="Android 연결" class="cs_right"> Android &gt;</a>
+        </li>
+      </ul>
+      <div class="random_banner">
+        <img src="./images/r_banner1.jpg" alt="랜덤배너 1" id="r_banner">
+      </div>
+    </section>
+
   </main>
 
 
@@ -269,83 +338,7 @@
   <script src="./script/jquery.cookie.js"></script>
   <script src="./script/prefixfree.min.js"></script>
   <script src="./script/swiper.js"></script>
-  <script>
-    var swiper = new Swiper('.top3',{
-      autoplay:{
-        delay:3000,
-        disableOnInteraction: false,
-      },
-      loop:true,
-      navigation:{
-        nextEl:".top3 .swiper-button-next",
-        prevEl:".top3 .swiper-button-prev",
-      },
-      pagination:{
-        el:'.swiper-pagination',
-        clickable:true,//컨트롤 버튼 클릭 가능하도록
-      }
-    })
+  <script src="./script/main.js"></script>
 
-    var swiper2 = new Swiper('.event',{
-      autoplay:{
-        delay:3000,
-        disableOnInteraction: false,
-      },
-      loop:true,
-      navigation:{
-        nextEl:".event .swiper-button-next",
-        prevEl:".evnet .swiper-button-prev",
-      },
-      pagination:{
-        el:'.swiper-pagination',
-        clickable:true,//컨트롤 버튼 클릭 가능하도록
-      }
-    })
-  </script>
-  
-
-
-
-  <script>
-    $(document).ready(function(){
-      //변수선언
-      let modal = `
-      <div class="modal">
-    <div class="m_inner">
-      <a href="#" title="">
-        <img src="./images/main_Popup_PC_450x600.jpg">
-      </a>
-      <input type="checkbox" id="ch">
-      <label for="ch">일주일간 열지 않기</label>
-      <input type="button" value="닫기" class="r_btn">
-    </div>
-  </div>
-      `
-      $('body').append(modal);
-
-      let ch =$('#ch');
-      //쿠키정보가 있다면 모당창이 안나오게 한다
-      if($.cookie('popup')=='none'){
-        $('.modal').hide()
-      } 
-
-      //체크박스를 체크하고 닫기버튼 누르면 모달창이 닫힘
-      function close_popup(){
-        if(ch.is(':checked')){//체크가 된 경우라면
-          //쿠키정보가 저장되어야함
-          $.cookie('popup','none',{expires:7, path:'/'});//쿠키정보를 popup,none값으로 생성
-        $('.modal').hide()
-        }else{//체크박스에 체크하지 않았다면 
-          //쿠키정보를 생성하지 않고 그냥 닫기
-          $('.modal').hide()
-        }
-      }
-
-      //닫기버튼 클릭시 close_popup 함수를 호출하여 실행한다,
-      $('.r_btn').click(function(){
-        close_popup();
-      })
-    })
-  </script>
 </body>
 </html>

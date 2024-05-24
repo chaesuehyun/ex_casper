@@ -23,6 +23,15 @@ header{
 header > h1{
   padding: 24px 0px 0px 2%;
 }
+/*스크롤시 고정되는 헤더 서식*/
+.h_act{
+  position: fixed; top: 0px; left: 0px;
+  z-index: 2000;
+  background: rgba(255,255,255,.8) !important;
+}
+.h_act a, .h_act i{color: var(--f_color1) !important;}
+
+/* html,body{scroll-behavior: smooth;} */
 
 /*내비게이션*/
 .gnb {

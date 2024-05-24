@@ -14,6 +14,7 @@
   --s_color4 : #cccccc;
 }
 
+
 /*모달창 서식*/
 .modal{
   background: rgba( 0,0,0,.6);
@@ -152,6 +153,7 @@
 .swiper-pagination-bullet-active{
   background: var(--f_color2) !important;
 }
+.swiper-pagination1{margin-top: 30px;}
 /*--------------------------------------------------*/
 
 /*소개 컨텐츠 2*/
@@ -178,12 +180,14 @@
 }
 #intro .intro_title_right{
   bottom: 100px ; right: 100px;
-  text-align: right; animation: ani2 6s;
+  text-align: right; 
 }
 #intro .intro_title_left{ 
-  top:100px; left:150px; animation: ani1 5s;
+  top:100px; left:150px; 
 }
 
+.act1{animation: ani2 6s forwards;}
+.act2{animation: ani1 5s forwards;}
 
 @keyframes ani1{
   0%{opacity: 0;}
@@ -262,7 +266,7 @@
   width: 100%;
   text-align: center;
   margin-top: 50px;
-  background: #ccc;
+  background: #e9e9e9;
   height: 600px;
 }
 .event_promo h2{padding-top: 70px;}
@@ -284,6 +288,7 @@
 }
 
 /*-------------------------------------------------------*/
+/*6번째 컨텐츠*/
 .buy_info{
   width: 100%; text-align: center;
 }
@@ -318,6 +323,122 @@
   height: 560px;
   margin: 50px 0px;
 }
+/*----------------------------------------------------*/
+/*7번 고객지원*/
+.cs{
+  background: #e9e9e9;
+  padding: 80px 0px;
+}
+
+.cs >h2{text-align: center; margin-bottom: 80px;}
+.cs > article{height: 350px;}
+.cs > article, .cs > ul, .cs > .random_banner{
+  width: 1200px; margin: 15px auto; 
+  background: var(--m_bt_color);
+}
+
+.cs > article > h3{
+  font-size: 18px;
+  text-align: center;
+  padding: 60px 0px 20px 0px;
+  font-weight: bold;
+}
+
+.ars_left{border-right: 1px solid #ccc;}
+.ars_left, .ars_right{
+  width: 50%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  float: left;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cs p{
+  display: flex; 
+  /*flex의 속성으로 세로로 바꿔주는거 줄바꿈*/
+  flex-direction: column; 
+  line-height: 30px;
+  align-items: center;
+}
+.cs p > a{
+  color: var(--s_color3);
+  font-weight: bold;
+}
+.cs strong{
+  font-weight: 500;
+  font-size: var(--f_size16);
+}
+.cs dl{
+  line-height: 24px;
+}
+.cs dl >dt{font-weight: bold; }
+.cs dl >dd{color: #333;}
+
+.car_icon, .member_icon{
+  background-image: url(../images/bg-support-ars.png);
+  display: inline-block;
+  text-indent: -9999px;
+  margin-top: 30px;
+  height: 46px;
+}
+.car_icon{width: 75px;transform: translateY(30px);}
+.member_icon{background-position: -90px 0px;width: 60px;}
+
+/*플로트 속성 해제*/
+.clearfix::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/*ul 태그*/
+.cs > ul{
+  display: flex;
+  background: none; 
+  justify-content: space-between;
+}
+.cs > ul > li{
+  height: 170px; 
+  width: 150px;
+  background: var(--m_bt_color);
+  padding: 60px 70px;
+  position: relative;
+}
+.cs_etc > li >h3{
+  font-size: 20px;
+  /* margin-top: 30px; */
+  margin-bottom: 20px;
+}
+.cs_etc > li >p{display: block; line-height: 20px;}
+.cs_etc > li >a{
+  position: absolute;
+  bottom: 20px;
+  color: var(--s_color3);
+}
+.cs_img{
+  top: 170px; left: 110px;
+}
+.cs_txt{top: 120px;}
+.cs_left{left: 90px;}
+.cs_right{right: 90px;}
+.cs_btn{
+  width: 120px;
+  height: 30px;
+  background: var(--s_color2);
+  color: #fff !important;
+  text-align: center;
+  line-height: 30px;
+  left: 80px;
+}
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------*/
 /*모달창 서식*/
